@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { HERO_TEXT } from '../constants';
 import TensorStack from './TensorStack';
@@ -17,7 +16,7 @@ const Hero: React.FC = () => {
     // Config
     const typeSpeed = 80;
     const deleteSpeed = 40;
-    const pauseDuration = 4000; // 4 seconds pause
+    const pauseDuration = 3000; // 3 seconds pause
 
     let timer: ReturnType<typeof setTimeout>;
 
@@ -94,11 +93,17 @@ const Hero: React.FC = () => {
             </h2>
           </div>
 
-          <p className="text-sm sm:text-base font-mono text-gray-400 max-w-lg leading-relaxed border-l border-white/10 pl-4">
+          {/* 添加 whitespace-pre-line 以识别 \n 换行符 */}
+          <p className="text-sm sm:text-base font-mono text-gray-400 max-w-lg leading-relaxed border-l border-white/10 pl-4 whitespace-pre-line">
             {HERO_TEXT.tagline}
           </p>
 
           <div className="flex flex-wrap gap-4 mt-8">
+            {/* 新增：View Journey 按钮 (Outlined Style with Yellow Accent) */}
+            <a href="#journey" className="px-6 py-3 border border-white/20 text-white font-bold text-sm tracking-wider hover:border-accent-yellow hover:text-accent-yellow hover:shadow-[0_0_15px_rgba(255,215,0,0.2)] transition-all duration-300">
+              VIEW_JOURNEY
+            </a>
+
             <a href="#projects" className="group relative px-6 py-3 overflow-hidden bg-white text-black font-bold text-sm tracking-wider">
                <span className="absolute inset-0 w-full h-full bg-accent-yellow transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>
                <span className="relative group-hover:text-black transition-colors">VIEW PROJECTS</span>

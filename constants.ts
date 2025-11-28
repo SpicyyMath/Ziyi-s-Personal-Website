@@ -3,14 +3,17 @@ import { Project, Skill } from './types';
 export const HERO_TEXT = {
   greeting: "Hello, World.", 
   name: "Ziyi Wang",
-  role: "AI Engineer & Full-Stack Developer", // Fallback
   roles: [
-    "AI Engineer & Full-Stack Developer",
+    "Full-Stack AI Engineer",
+    "AI Software Developer",
     "Computer Vision Engineer",
-    "Deep Learning Specialist",
-    "Creative Technologist"
+    "Deep Learning Engineer",
+    "Product Owner",
+    "Good Friend"
   ],
-  tagline: "Turning Logic into Intelligence. Building high-impact AI solutions with 90% efficiency."
+  tagline: "Turning Ideas into Applications: transforming complex ideas into scalable AI systems.\n" + 
+  "From Code to Cloud: Architecting a Serverless AI SaaS on AWS.\n" + 
+  "Bridging Academia and Industry with Innovative AI Solutions."
 };
 
 export const PROJECTS: Project[] = [

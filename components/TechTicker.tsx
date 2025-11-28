@@ -1,8 +1,18 @@
 import React from 'react';
 
 const TECH_STACK = [
-  "PYTHON", "TYPESCRIPT", "RUST", "PYTORCH", "REACT", "DOCKER", "TAILWIND",
-  "NEXT.JS", "THREE.JS", "TENSORFLOW", "AWS", "GIT"
+  "PYTHON",
+  "TYPESCRIPT",
+  "RUST",
+  "PYTORCH",
+  "OPENCV",      // 新增: 呼应你的 Computer Vision Engineer 身份
+  "REACT",
+  "NEXT.JS",
+  "THREE.JS",    // 保留: 体现 Creative Technologist
+  "AWS LAMBDA",  // 升级: 比单纯的 AWS 更具体，呼应 Serverless 架构
+  "DOCKER",
+  "SERVERLESS",  // 新增: 强调架构能力 (Amplify/Lambda Web Adapter)
+  "CLOUDFLARE"   // 新增: 体现 Network/DNS/Security 掌控力
 ];
 
 const TechTicker: React.FC = () => {
