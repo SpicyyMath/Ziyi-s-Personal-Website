@@ -54,7 +54,7 @@ const App: React.FC = () => {
                         <span className="font-mono text-xs text-gray-500 group-hover/link:text-accent-blue tracking-widest transition-colors">GITHUB</span>
                     </a>
 
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" 
+                    <a href="https://www.linkedin.com/in/ziyi-wang-6b1496229/" target="_blank" rel="noopener noreferrer" 
                        className="group/link flex flex-col items-center gap-3">
                         <div className="w-14 h-14 rounded-2xl glass-panel border border-white/10 flex items-center justify-center group-hover/link:bg-white/10 group-hover/link:scale-110 group-hover/link:border-blue-400/50 transition-all duration-300">
                             <i className="ph ph-linkedin-logo text-3xl text-gray-300 group-hover/link:text-white"></i>
