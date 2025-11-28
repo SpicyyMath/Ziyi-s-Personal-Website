@@ -15,7 +15,7 @@ interface LocationPoint {
 // 更新配色方案：电光青、洋红、电光黄
 const locations: LocationPoint[] = [
   { id: 'china', label: 'China', color: '#FF00FF', position: [3.44, 0.1, -0.32] },      // Magenta
-  { id: 'canada', label: 'Edmonton, CA', color: '#00FFFF', position: [-3.65, 0.1, -1.22] }, // Cyan
+  { id: 'canada', label: 'Edmonton, CA', color: '#10B981', position: [-3.65, 0.1, -1.22] }, // Emerald Green
   { id: 'australia', label: 'Sydney, AU', color: '#FFE000', position: [4.54, 0.1, 1.52] },  // Electric Yellow
 ];
 
@@ -254,7 +254,7 @@ interface JourneyMapProps {
   onLocationHover?: (id: string | null) => void;
 }
 
-export default function JourneyMap({ activeLocationId, onLocationHover }: JourneyMapProps) {
+const JourneyMap = ({ activeLocationId, onLocationHover }: JourneyMapProps) => {
   const [internalHovered, setInternalHovered] = useState<string | null>(null);
   const hoveredLocation = activeLocationId !== undefined ? activeLocationId : internalHovered;
   
@@ -264,7 +264,7 @@ export default function JourneyMap({ activeLocationId, onLocationHover }: Journe
   };
 
   return (
-    <div className="relative w-full h-full">
+    <div className="w-full h-full relative">
       <Canvas
         orthographic
         camera={{ 
@@ -285,28 +285,23 @@ export default function JourneyMap({ activeLocationId, onLocationHover }: Journe
         />
       </Canvas>
 
-      {/* HUD 界面层 */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-4 left-4 w-8 h-8 border-l-2 border-t-2 border-white/10"></div>
-        <div className="absolute top-4 right-4 w-8 h-8 border-r-2 border-t-2 border-white/10"></div>
-        <div className="absolute bottom-4 left-4 w-8 h-8 border-l-2 border-b-2 border-white/10"></div>
-        <div className="absolute bottom-4 right-4 w-8 h-8 border-r-2 border-b-2 border-white/10"></div>
-
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-6 text-[10px] font-mono text-gray-400 bg-black/60 px-4 py-2 rounded-full backdrop-blur-md border border-white/10">
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-[#FF00FF] rounded-full shadow-[0_0_8px_#FF00FF]" />
-            <span>CHINA</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-[#00FFFF] rounded-full shadow-[0_0_8px_#00FFFF]" />
-            <span>CANADA</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-[#FFE000] rounded-full shadow-[0_0_8px_#FFE000]" />
-            <span>AUSTRALIA</span>
-          </div>
+      {/* Map Legend */}
+      <div className="absolute bottom-6 right-8 flex items-center gap-6 font-mono text-[10px] text-gray-500 uppercase tracking-widest">
+        <div className="flex items-center gap-2">
+          <div className="w-2 h-2 rounded-full bg-[#FF00FF]"></div>
+          <span>China</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="w-2 h-2 rounded-full bg-[#10B981]"></div>
+          <span>Canada</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="w-2 h-2 rounded-full bg-[#FFE000]"></div>
+          <span>Australia</span>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default JourneyMap;

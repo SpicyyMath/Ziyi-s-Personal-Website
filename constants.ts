@@ -11,9 +11,7 @@ export const HERO_TEXT = {
     "Product Owner",
     "Good Friend"
   ],
-  tagline: "Turning Ideas into Applications: transforming complex ideas into scalable AI systems.\n" + 
-  "From Code to Cloud: Architecting a Serverless AI SaaS on AWS.\n" + 
-  "Bridging Academia and Industry with Innovative AI Solutions."
+  tagline: "Trying Harder"
 };
 
 export const PROJECTS: Project[] = [
@@ -71,12 +69,16 @@ export const PROJECTS: Project[] = [
 ];
 
 export const SKILLS: Skill[] = [
-  { name: 'React / Next.js', category: 'Frontend', level: 95 },
-  { name: 'TypeScript', category: 'Frontend', level: 90 },
-  { name: 'Tailwind CSS', category: 'Frontend', level: 95 },
-  { name: 'Node.js', category: 'Backend', level: 85 },
-  { name: 'Gemini / OpenAI API', category: 'AI/ML', level: 80 },
-  { name: 'Three.js / R3F', category: 'Frontend', level: 75 },
+  // 调整后的核心能力，以更好地匹配简历
+  { name: 'Python (PyTorch / FastAPI)', category: 'Backend', level: 95 },
+  { name: 'LLMs (Gemini / Prompt Eng.)', category: 'AI/ML', level: 95 },
+  { name: 'Computer Vision (OpenCV)', category: 'AI/ML', level: 90 },
+  { name: 'React / TypeScript', category: 'Frontend', level: 88 },
+  { name: 'Docker / Nginx', category: 'Tools', level: 88 },
+  { name: 'AWS (Serverless / Lambda)', category: 'Backend', level: 85 },
+  { name: 'Tailwind CSS', category: 'Frontend', level: 85 },
+  { name: 'Node.js', category: 'Backend', level: 80 },
+  { name: 'Three.js / R3F', category: 'Frontend', level: 70 },
 ];
 
 export interface JourneyLocation {

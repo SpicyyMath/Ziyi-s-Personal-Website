@@ -3,7 +3,8 @@ import Layout from './components/Layout';
 import Hero from './components/Hero';
 import JourneySection from './components/JourneySection';
 import TechTicker from './components/TechTicker';
-import BentoGrid from './components/BentoGrid';
+import ProjectsGrid from './components/ProjectsGrid'; // Import the new component
+import CredentialsSection from './components/CredentialsSection';
 
 const App: React.FC = () => {
   return (
@@ -18,8 +19,11 @@ const App: React.FC = () => {
       {/* Divider */}
       <TechTicker />
 
-      {/* Section 3: The Lab + Projects Fused */}
-      <BentoGrid />
+      {/* Section 3: The Command Center (Projects) */}
+      <ProjectsGrid />
+
+      {/* Section 4: Credentials */}
+      <CredentialsSection />
 
       {/* Contact Section */}
       <section id="contact" className="py-24 px-6 sm:px-12 lg:px-24 mb-20 max-w-7xl mx-auto">
